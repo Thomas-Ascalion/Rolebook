@@ -1,0 +1,31 @@
+@import url('var.css');
+@import url('global.css');
+
+
+body {
+    overflow-x: hidden;
+    margin: 0 auto;
+    padding: 0;
+    background-image: var(--img-font);  /* Utilisation de la variable */
+    background-size: cover;       /* Couvre toute la page */
+    background-position: center;  /* Centre l'image */
+    background-repeat: no-repeat; /* Pas de répétition de l'image */
+    background-attachment: fixed; /* Image fixe même en défilant */
+}
+
+.banner{
+	display: flex;
+	gap: 3rem;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.banner-title {
+    text-align: center; /* Centre le texte */
+    font-size: 30px;
+    width: 90%;
+    margin: 0 auto;
+    color: var(--font-color); /* Utilise la couleur définie */
+    font-family: var(--font-family-h); /* Utilise la police définie */
+    z-index: 1; /* S'assure que le texte est devant */
+}

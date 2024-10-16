@@ -1,0 +1,99 @@
+@import url('var.css');
+@import url('global.css');
+
+/* Style pour le header */
+header {
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    overflow: hidden;  /* Retirer le défilement */
+    display: flex;
+    flex-direction: column;
+    background-color: var(--font-color-blanc);
+    align-items: center;
+    z-index: 10;  /* Le header doit avoir un z-index supérieur */
+}
+
+.logo-container {
+    display: flex;             /* Utilisation de Flexbox pour centrer le logo */
+    justify-content: center;   /* Centre le logo horizontalement */
+    align-items: center;       /* Centre le logo verticalement */
+    padding: 20px;  
+    width: 30%;          
+}
+
+/* Style pour le logo */
+.logo {
+    max-width: 230px; /* Le logo ne dépassera pas la largeur de son conteneur */
+    height: auto;    /* Conserve les proportions de l'image */
+}
+
+.nav-container{
+	width: 100%;
+}
+/* Navigation principale en ligne */
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative;  /* Nécessaire pour les sous-menus */
+    margin: 0 15px;  /* Espacement entre les éléments du menu */
+}
+
+/* Liens dans le menu et sous-menu */
+nav ul li a {
+    text-decoration: none;        /* Pas de soulignement */
+    color: var(--font-color);    /* Couleur définie par la variable */
+    padding: 10px;               /* Espacement autour du texte */
+    display: block;              /* Affiche chaque lien comme un bloc */
+    font-size: 24px;             /* Taille de la police à 24px */
+    font-weight: bold;           /* Texte en gras */
+}
+/* Sous-menu (dropdown) */
+nav ul li ul.dropdown-menu {
+    display: none;  /* Caché par défaut */
+    position: absolute;
+    top: 100%;  /* Positionné en dessous du lien parent */
+    left: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;  /* Sous-menu en colonne */
+    width: 150px;
+    z-index: 20;  /* Donner une priorité plus élevée au sous-menu */
+}
+
+nav ul li:hover ul.dropdown-menu {
+    display: block;  /* Afficher le sous-menu au survol */
+}
+
+
+
+nav ul li ul.dropdown-menu li a {
+    color: var(--font-color);
+    padding: 10px;
+    display: block;
+}
+
+nav ul li a:hover,
+nav ul li ul.dropdown-menu li a:hover {
+    color: var(--font-color);
+}
+
+.friseheadbas {
+    display: flex;
+    height:100%;
+    flex-direction: column; /* Arrange les éléments en colonne */
+ /* Définir la hauteur de la div pour voir l'effet */
+}
+
+.friseheadbas img {
+    height: 100%;
+    margin-top: auto; /* Pousse l'image vers le bas */
+}
